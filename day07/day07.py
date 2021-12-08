@@ -18,10 +18,14 @@ def minimum_fuel_consumed(part):
         lowest_fuel = fuel_calc(n, part)
     return lowest_fuel
 
-if __name__ == '__main__':
+def Main():
+    global df
     file = open("2021/day07/input.txt").read()
     data = list(map(int, file.split(',')))
     df = pd.DataFrame(data, columns=['a'])
 
     print('Part 1:', minimum_fuel_consumed(1))
-    print('Part 2:', minimum_fuel_consumed(2))
+    print('Part 2:', minimum_fuel_consumed(2))    
+
+if __name__ == '__main__':
+    Main()

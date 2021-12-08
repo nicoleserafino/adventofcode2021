@@ -83,11 +83,13 @@ def part2(diagram, segments):
     # print_diagram(diagram)
     return count_diagram(diagram)
 
-if __name__ == "__main__":
-    with open("2021/day05/input.txt", "r") as f:
-        diagram, segments = parse_input(f.read())
+def Main():
+    diagram, segments = parse_input(open("2021/day05/input.txt", "r").read())
     # part 1
     p1 = part1(deepcopy(diagram), segments)
     # part 2
     p2 = part2(deepcopy(diagram), segments)
     print(f"Part 1: {p1}\nPart 2: {p2}")
+
+if __name__ == "__main__":
+    Main()

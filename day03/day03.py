@@ -27,11 +27,14 @@ def reduce_codes(codes, maximize, alt):
         if len(codes) == 1:
             return "".join(codes)
 
-if __name__ == '__main__':
+def Main():
     oxygen = reduce_codes(data, True, "1")
     co2 = reduce_codes(data, False, "0")
     part2 = int(oxygen, 2) * int(co2, 2)
 
     # answers
     print("Part 1:", part1)
-    print("Part 2:", part2)
+    print("Part 2:", part2)    
+
+if __name__ == '__main__':
+    Main()

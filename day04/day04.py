@@ -20,9 +20,7 @@ def parse_input(data):
     seq = [[int(y) for y in x.split()] for x in data if x != "\n"]
     return [seq[i:i+5] for i, x in enumerate(seq) if i % 5 == 0]
 
-
-if __name__ == '__main__':
-
+def Main():
     with open("2021/day04/input.txt", 'r') as f:
         draws = [int(x) for x in f.readline().split(",")]
         boards = parse_input(f.readlines())
@@ -36,4 +34,7 @@ if __name__ == '__main__':
     while boards:
         draw_idx, win_idx, win_board = draw_num(boards, draws)
         del boards[win_idx]
-    print("Part 2:", draws[draw_idx] * board_sum(win_board))
+    print("Part 2:", draws[draw_idx] * board_sum(win_board)) 
+    
+if __name__ == '__main__':
+    Main()
