@@ -14,8 +14,7 @@ def get_low_points(data):
 
 def check_neighbors(data, basin_points, more_neighbors):
     all_neighbors = {}
-    for k in more_neighbors.keys():
-        i, j = k
+    for i, j in more_neighbors.keys():
         new_neighbors = {x:int(data[x[0]][x[1]]) for x in [(i, j-1), (i, j+1), (i-1, j), (i+1, j)] if -1 not in x and 100 not in x and x not in basin_points.keys() and int(data[x[0]][x[1]]) != 9}
         all_neighbors = {**all_neighbors, **new_neighbors}
     return all_neighbors
