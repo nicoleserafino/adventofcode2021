@@ -37,4 +37,5 @@ def Main():
     print("Part 2:", part2)    
 
 if __name__ == '__main__':
+    print(data)
     Main()
